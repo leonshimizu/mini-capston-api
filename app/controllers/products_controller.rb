@@ -3,3 +3,5 @@ class ProductsController < ApplicationController
     render json: {message: "Hello"}
   end
 end
+
+# test
