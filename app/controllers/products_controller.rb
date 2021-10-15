@@ -12,8 +12,8 @@ class ProductsController < ApplicationController
 
   def create
     new_product = Product.new(
-      name: params["name"], 
-      price: params["price"]
+      name: params[:name], 
+      price: params[:price]
     )
     new_product.save
     render json: new_product.as_json

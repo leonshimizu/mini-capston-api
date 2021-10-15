@@ -8,6 +8,6 @@ POST http://localhost:3000/products.json
 content-type: application/json
 
 {
-  "name": "juice",
+  "name": "chips",
   "price": 5
 }
