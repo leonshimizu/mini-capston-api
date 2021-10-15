@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    render json: {message: "hello"}
+    product = Product.all
+    render json: product.as_json
   end
 end
