@@ -11,7 +11,8 @@ class ProductsController < ApplicationController
   end
 
   def create
-    new_product = Product.new(name: Faker::Dessert.variety, price: Faker::Number.decimal(l_digits: 2, r_digits: 2))
+    new_product = Product.new(name: params["name"], price: params["price"])
+    new_product.save
     render json: new_product.as_json
   end
 end
