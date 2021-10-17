@@ -22,3 +22,6 @@ content-type: application/json
   "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg",
   "description": "picture of budweiser"
 }
+
+###
+DELETE http://localhost:3000/products/109
