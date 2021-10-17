@@ -11,3 +11,14 @@ content-type: application/json
   "name": "chips",
   "price": 5
 }
+
+###
+PATCH http://localhost:3000/products/7
+content-type: application/json
+
+{
+  "name": "beer",
+  "price": 7,
+  "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg",
+  "description": "picture of budweiser"
+}
