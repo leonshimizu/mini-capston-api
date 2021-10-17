@@ -11,12 +11,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    new_product = Product.new(
+    product = Product.new(
       name: params[:name], 
       price: params[:price]
     )
-    new_product.save
-    render json: new_product.as_json
+    product.save
+    render json: product.as_json
   end
 
   def update
@@ -26,9 +26,7 @@ class ProductsController < ApplicationController
     product.price = params[:price] || product.price
     product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
-
     product.save
-
     render json: product.as_json
   end
 
