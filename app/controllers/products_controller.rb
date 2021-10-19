@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def show
     id = params[:id]
     product = Product.find_by(id: id)
-    render json: product.as_json(methods: [:is_discounted?, :tax])
+    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
   end
 
   def create
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
       price: params[:price]
     )
     product.save
-    render json: product.as_json(methods: [:is_discounted?, :tax])
+    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
   end
 
   def update

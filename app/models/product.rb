@@ -10,6 +10,12 @@ class Product < ApplicationRecord
   def tax
     float = price.to_f
     added_tax = float * 0.09
+    return added_tax.round(2)
+  end
+
+  def total
+    float = price.to_f
+    added_tax = float * 0.09
     price = added_tax + float
   end
 end
