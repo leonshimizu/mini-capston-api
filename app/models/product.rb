@@ -19,4 +19,8 @@ class Product < ApplicationRecord
     added_tax = float * 0.09
     price = added_tax + float
   end
+
+  # def how_many #should this be in here or in the controller
+  #   the_id = 
+  # end
 end
