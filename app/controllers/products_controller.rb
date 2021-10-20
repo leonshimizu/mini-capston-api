@@ -26,17 +26,6 @@ class ProductsController < ApplicationController
     product.price = params[:price] || product.price
     product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
-    
-    # i = 1   # incomplete
-    # count = 0
-    # 100.times do
-    #   prod = Product.find_by(id: i)
-    #   if prod.name == product.name
-    #     count += 1
-    #   end
-    # end
-    # product.how_many = count
-
     product.save
     render json: product
   end

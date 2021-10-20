@@ -20,7 +20,8 @@ class Product < ApplicationRecord
     price = added_tax + float
   end
 
-  # def how_many # ?
-  #   return 5
-  # end
+  def how_many 
+    count = Product.where(name: name).count
+    return count
+  end
 end
