@@ -15,8 +15,12 @@ class ProductsController < ApplicationController
       name: params[:name], 
       price: params[:price]
     )
-    product.save
-    render json: product
+
+    if product.save
+      render json: product
+    else
+      render json: {erros: product.errors.full_messages}
+    end
   end
 
   def update
