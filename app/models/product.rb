@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  belongs_to :supplier
+  
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :description, length: { in: 10..500}, allow_blank: true
@@ -30,11 +32,11 @@ class Product < ApplicationRecord
     return count
   end
 
-  def supplier
-    if supplier_id
-      return Supplier.find(supplier_id)
-    else
-      return nil
-    end
-  end
+  # def supplier # same as code on line 2
+  #   if supplier_id
+  #     return Supplier.find(supplier_id)
+  #   else
+  #     return nil
+  #   end
+  # end
 end
