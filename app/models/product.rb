@@ -29,4 +29,8 @@ class Product < ApplicationRecord
     count = Product.where(name: name).count
     return count
   end
+
+  def supplier
+    Supplier.find(supplier_id)
+  end
 end
