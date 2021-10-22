@@ -8,18 +8,18 @@ POST http://localhost:3000/products.json
 content-type: application/json
 
 {
-  "name": "Table",
+  "name": "TAble",
   "price": 100,
   "description": "Holds things",
   "supplier_id": 5
 }
 
 ###
-PATCH http://localhost:3000/products/50.json
+PATCH http://localhost:3000/products/51.json
 content-type: application/json
 
 {
-  "name": "BEer",
+  "name": "BEEr",
   "price": 5,
   "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg",
   "description": "picture of budweiser",

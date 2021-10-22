@@ -31,6 +31,10 @@ class Product < ApplicationRecord
   end
 
   def supplier
-    Supplier.find(supplier_id)
+    if supplier_id
+      return Supplier.find(supplier_id)
+    else
+      return nil
+    end
   end
 end
