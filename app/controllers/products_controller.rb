@@ -13,7 +13,9 @@ class ProductsController < ApplicationController
   def create
     product = Product.new(
       name: params[:name], 
-      price: params[:price]
+      price: params[:price],
+      description: params[:description],
+      supplier_id: params[:supplier_id]
     )
 
     if product.save
@@ -30,6 +32,7 @@ class ProductsController < ApplicationController
     product.price = params[:price] || product.price
     product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
+    product.supplier_id = params[:supplier_id] || product.supplier_id
     if product.save
       render json: product
     else

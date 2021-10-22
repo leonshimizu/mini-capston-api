@@ -1,26 +1,29 @@
 GET http://localhost:3000/products.json
 
 ###
-GET http://localhost:3000/products/100.json
+GET http://localhost:3000/products/50.json
 
 ###
 POST http://localhost:3000/products.json
 content-type: application/json
 
 {
-  "name": "chips",
-  "price": 1
+  "name": "Table",
+  "price": 100,
+  "description": "Holds things",
+  "supplier_id": 5
 }
 
 ###
-PATCH http://localhost:3000/products/100.json
+PATCH http://localhost:3000/products/50.json
 content-type: application/json
 
 {
-  "name": "Beer",
-  "price": 216,
+  "name": "BEer",
+  "price": 5,
   "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg",
-  "description": "picture of budweiser"
+  "description": "picture of budweiser",
+  "supplier_id": 1
 }
 
 ###
