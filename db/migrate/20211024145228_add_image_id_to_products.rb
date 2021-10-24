@@ -1,0 +1,6 @@
+class AddImageIdToProducts < ActiveRecord::Migration[6.1]
+  def change
+    remove_column :products, :image_url, :string
+    add_column :products, :image_url_id, :integer
+  end
+end
