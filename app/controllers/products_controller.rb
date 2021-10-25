@@ -15,8 +15,7 @@ class ProductsController < ApplicationController
       name: params[:name], 
       price: params[:price],
       description: params[:description],
-      supplier_id: params[:supplier_id],
-      image_url_id: params[:image_url_id]
+      supplier_id: params[:supplier_id]
     )
 
     if product.save
@@ -33,7 +32,6 @@ class ProductsController < ApplicationController
     product.price = params[:price] || product.price
     product.description = params[:description] || product.description
     product.supplier_id = params[:supplier_id] || product.supplier_id
-    product.image_url_id = params[:image_url_id] || products.image_url_id
     if product.save
       render json: product
     else

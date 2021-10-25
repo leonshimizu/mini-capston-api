@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
   belongs_to :supplier
-  belongs_to :image_url
   
   validates :name, presence: true
   validates :name, uniqueness: true
