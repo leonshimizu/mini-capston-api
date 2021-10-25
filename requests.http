@@ -34,13 +34,23 @@ content-type: application/json
 DELETE http://localhost:3000/products/117
 
 ###
-# user requests
+# signup
 POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "Test",
-  "email": "test@gmail.com",
+  "name": "Test1",
+  "email": "test1@gmail.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+###
+# login
+POST http://localhost:3000/sessions
+content-type: application/json
+
+{
+  "email": "test1@gmail.com",
+  "password": "password"
 }
