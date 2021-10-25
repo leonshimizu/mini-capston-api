@@ -1,6 +1,7 @@
 ###
 #products requests
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzUyOTEzMzh9.22Fr6JUiJEE9fbY0fzkCyr3xiVFf106XFxd08SVw1oE
 
 ###
 GET http://localhost:3000/products/50.json
@@ -39,8 +40,8 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "Test1",
-  "email": "test1@gmail.com",
+  "name": "Test2",
+  "email": "test2@gmail.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -51,6 +52,6 @@ POST http://localhost:3000/sessions
 content-type: application/json
 
 {
-  "email": "test1@gmail.com",
+  "email": "test2@gmail.com",
   "password": "password"
 }

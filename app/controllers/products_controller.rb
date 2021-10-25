@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
   def index
-    products = Product.all
-    render json: products
+    if current_user
+      products = Product.all
+      render json: products
+    else
+      render json: {message: "Sorry, you must be logged in to view..."}
+    end
   end
 
   def show
