@@ -72,7 +72,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwN
 
 ###
 # update order
-PATCH http://localhost:3000/orders/1
+PATCH http://localhost:3000/orders/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys 
 content-type: application/json 
 

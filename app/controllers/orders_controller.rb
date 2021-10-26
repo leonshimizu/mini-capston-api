@@ -34,10 +34,14 @@ class OrdersController < ApplicationController
   def update
     if current_user
       order = Order.find(params[:id])
-      order.product_id = params[:product_id] || order.product_id
-      order.quantity = params[:quantity] || order.quantity
-      order.save
-      render json: order
+      if order.user_id == current_user.id
+        order.product_id = params[:product_id] || order.product_id
+        order.quantity = params[:quantity] || order.quantity
+        order.save
+        render json: order
+      else
+        render json: {message: "Sorry, no order found..."}
+      end
     else
       render json: {message: "Sorry you must be logged in..."}
     end
