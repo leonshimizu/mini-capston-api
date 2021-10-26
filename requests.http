@@ -4,7 +4,7 @@ GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzUyOTEzMzh9.22Fr6JUiJEE9fbY0fzkCyr3xiVFf106XFxd08SVw1oE
 
 ###
-GET http://localhost:3000/products/50.json
+GET http://localhost:3000/products/1.json
 
 ###
 POST http://localhost:3000/products.json
@@ -14,8 +14,7 @@ content-type: application/json
   "name": "TABle",
   "price": 100,
   "description": "Holds things",
-  "supplier_id": 5,
-  "image_url_id": 2
+  "supplier_id": 5
 }
 
 ###
@@ -25,10 +24,9 @@ content-type: application/json
 {
   "name": "BEEr",
   "price": 5,
-  "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg",
   "description": "picture of budweiser",
   "supplier_id": 1,
-  "image_url_id": 1
+  "image_url": "https://us.budweiser.com/content/dam/brand-template/budweiser/history/desktop/Budweiser_Desktop_Heritage_BuyBeer.jpg"
 }
 
 ###
