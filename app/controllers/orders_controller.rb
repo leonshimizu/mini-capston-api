@@ -16,7 +16,11 @@ class OrdersController < ApplicationController
 
   def show
     order = Order.find(params[:id])
-    render json: order
+    if order.user_id == current_user.id
+      render json: order
+    else
+      render json: {message: "Sorry, no order found..."}
+    end
   end
 
   def update
