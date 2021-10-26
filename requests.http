@@ -53,3 +53,7 @@ content-type: application/json
   "email": "test2@gmail.com",
   "password": "password"
 }
+
+###
+# create order
+POST http://localhost:3000/orders
