@@ -65,6 +65,19 @@ content-type: application/json
   "quantity": 1
 }
 
+###
+# show order
+GET http://localhost:3000/orders/1
+
+###
+# update order
+PATCH http://localhost:3000/orders/1 
+content-type: application/json 
+
+{
+  "quantity": 1
+}
+
 # Test JWT - user_id - 1
 # eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
 
