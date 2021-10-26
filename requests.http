@@ -78,6 +78,12 @@ content-type: application/json
   "quantity": 1
 }
 
+###
+# order index
+GET http://localhost:3000/orders 
+
+
+
 # Test JWT - user_id - 1
 # eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
 
