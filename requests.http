@@ -57,12 +57,12 @@ content-type: application/json
 ###
 # create order
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
 content-type: application/json 
 
 {
-  "product_id": 224,
-  "quantitiy": 1
+  "product_id": 2,
+  "quantity": 1
 }
 
 # Test JWT - user_id - 1
