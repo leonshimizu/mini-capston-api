@@ -11,12 +11,12 @@ class OrdersController < ApplicationController
       total: product.total
     )
     order.save
-    render json: order.as_json
+    render json: order
   end
 
   def show
     order = Order.find(params[:id])
-    render json: order.as_json
+    render json: order
   end
 
   def update
@@ -24,11 +24,11 @@ class OrdersController < ApplicationController
     order.product_id = params[:product_id] || order.product_id
     order.quantity = params[:quantity] || order.quantity
     order.save
-    render json: order.as_json
+    render json: order
   end
 
   def index
     orders = current_user.orders 
-    render json: orders.as_json
+    render json: orders
   end
 end
