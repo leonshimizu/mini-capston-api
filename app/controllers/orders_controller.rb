@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  # before_action :authenticate_user # same code as if current_user
+
   def create
     if current_user
       product = Product.find(params[:product_id])
