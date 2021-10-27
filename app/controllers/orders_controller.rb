@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
       order.save
       render json: order
     else
-      render json: {message: "Sorry you must be logged in..."}
+      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
     end
   end
 
@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
         render json: {message: "Sorry, no order found..."}
       end
     else
-      render json: {message: "Sorry you must be logged in..."}
+      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
     end
   end
 
@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
         render json: {message: "Sorry, no order found..."}
       end
     else
-      render json: {message: "Sorry you must be logged in..."}
+      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
     end
   end
 
@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
       orders = current_user.orders 
       render json: orders
     else
-      render json: {message: "Sorry you must be logged in..."}
+      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
     end
   end
 end
