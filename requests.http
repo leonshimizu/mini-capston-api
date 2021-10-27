@@ -57,23 +57,23 @@ content-type: application/json
 ###
 # create order
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
+Authorization: Bearer {{test1_jwt}}
 content-type: application/json 
 
 {
-  "product_id": 6,
+  "product_id": 7,
   "quantity": 2
 }
 
 ###
 # show order
 GET http://localhost:3000/orders/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
+Authorization: Bearer {{test1_jwt}}
 
 ###
 # update order
-PATCH http://localhost:3000/orders/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys 
+PATCH http://localhost:3000/orders/4
+Authorization: Bearer {{test1_jwt}}
 content-type: application/json 
 
 {
@@ -83,9 +83,9 @@ content-type: application/json
 ###
 # order index
 GET http://localhost:3000/orders 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
+Authorization: Bearer {{test1_jwt}}
 
-
+# To use them use {{}}
 @test_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
 
 @test1_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
