@@ -22,4 +22,10 @@ class ApplicationController < ActionController::API
       render json: {message: "Sorry, you must be logged in"}, status: :unauthorized
     end
   end
+
+  def authenticate_admin
+    unless current_user && current_user.admin 
+      render json: {message: "Sorry, you don't have access"}, status: :unauthorized
+    end
+  end
 end
