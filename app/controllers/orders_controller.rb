@@ -8,9 +8,9 @@ class OrdersController < ApplicationController
       user_id: current_user.id,
       product_id: product.id,
       quantity: params[:quantity],
-      subtotal: (product.price * params[:quantity]),
-      tax: (product.tax * params[:quantity]),
-      total: (product.total * params[:quantity])
+      subtotal: (product.price * params[:quantity].to_i),
+      tax: (product.tax * params[:quantity].to_i),
+      total: (product.total * params[:quantity].to_i)
     )
     order.save
     render json: order
