@@ -57,7 +57,7 @@ content-type: application/json
 ###
 # create order
 POST http://localhost:3000/orders
-# Authorization: Bearer {{test1_jwt}}
+Authorization: Bearer {{test1_jwt}}
 content-type: application/json 
 
 {

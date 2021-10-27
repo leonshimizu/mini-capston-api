@@ -1,60 +1,44 @@
 class OrdersController < ApplicationController
-  # before_action :authenticate_user # same code as if current_user
+  before_action :authenticate_user # same code as if current_user
 
   def create
-    if current_user
-      product = Product.find(params[:product_id])
+    product = Product.find(params[:product_id])
 
-      order = Order.new(
-        user_id: current_user.id,
-        product_id: product.id,
-        quantity: params[:quantity],
-        subtotal: (product.price * params[:quantity]),
-        tax: (product.tax * params[:quantity]),
-        total: (product.total * params[:quantity])
-      )
-      order.save
-      render json: order
-    else
-      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
-    end
+    order = Order.new(
+      user_id: current_user.id,
+      product_id: product.id,
+      quantity: params[:quantity],
+      subtotal: (product.price * params[:quantity]),
+      tax: (product.tax * params[:quantity]),
+      total: (product.total * params[:quantity])
+    )
+    order.save
+    render json: order
   end
 
   def show
-    if current_user
-      order = Order.find(params[:id])
-      if order.user_id == current_user.id
-        render json: order
-      else
-        render json: {message: "Sorry, no order found..."}
-      end
+    order = Order.find(params[:id])
+    if order.user_id == current_user.id
+      render json: order
     else
-      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
+      render json: {message: "Sorry, no order found..."}
     end
   end
 
   def update
-    if current_user
-      order = Order.find(params[:id])
-      if order.user_id == current_user.id
-        order.product_id = params[:product_id] || order.product_id
-        order.quantity = params[:quantity] || order.quantity
-        order.save
-        render json: order
-      else
-        render json: {message: "Sorry, no order found..."}
-      end
+    order = Order.find(params[:id])
+    if order.user_id == current_user.id
+      order.product_id = params[:product_id] || order.product_id
+      order.quantity = params[:quantity] || order.quantity
+      order.save
+      render json: order
     else
-      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
+      render json: {message: "Sorry, no order found..."}
     end
   end
 
   def index
-    if current_user
       orders = current_user.orders 
       render json: orders
-    else
-      render json: {message: "Sorry you must be logged in..."}, status: :unauthorized
-    end
   end
 end
