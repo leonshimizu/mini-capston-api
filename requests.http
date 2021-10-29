@@ -12,7 +12,7 @@
 
 ###
 #products index
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=electronics
 Authorization: Bearer {{jwt}}
 
 ###
@@ -72,7 +72,7 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "email": "test2@gmail.com",
+  "email": "test@gmail.com",
   "password": "password"
 }
 

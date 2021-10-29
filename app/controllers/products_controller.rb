@@ -2,12 +2,9 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
-    if current_user
-      products = Product.all
-      render json: products
-    else
-      render json: {message: "Sorry, you must be logged in to view..."}
-    end
+    category = Category.find_by(name: params[:category])
+    products = category.products
+    render json: products
   end
 
   def show
