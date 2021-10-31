@@ -79,12 +79,6 @@ content-type: application/json
 # create order
 POST http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
-# content-type: application/json 
-
-# {
-#   "product_id": 9,
-#   "quantity": 2
-# }
 
 ###
 # show order
@@ -113,11 +107,16 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "product_id": 76,
-  "quantity": 3
+  "product_id": 1,
+  "quantity": 5
 }
 
 ###
 # carted_products index
 GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
+
+###
+# carted_products destroy
+DELETE http://localhost:3000/carted_products/14
 Authorization: Bearer {{jwt}}

@@ -4,20 +4,27 @@ class OrdersController < ApplicationController
   def create
     carted_products = CartedProduct.where(user_id: current_user.id)
 
-    item_price = 0
+    calculated_subtotal = 0
+    calculated_tax = 0
     carted_products.each do |item|
-      item_price += item.product.price
+      calculated_subtotal += item.product.price * item.quantity
+      calculated_tax += item.product.tax * item.quantity
     end
-    tax = item_price * 0.07
-    total = item_price + tax
-  
+
     order = Order.new(
       user_id: current_user.id,
-      subtotal: item_price,
-      tax: tax,
-      total: total 
+      subtotal: calculated_subtotal,
+      tax: calculated_tax,
+      total: calculated_subtotal + calculated_tax 
     )
     order.save
+
+    carted_products.each do |item|
+      item.update(
+        status: "purchased",
+        order_id: order.id
+      )
+    end
     render json: order
   end
 
