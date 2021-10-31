@@ -15,9 +15,11 @@ class CartedProductsController < ApplicationController
     render json: carted_products.as_json
   end
 
-  def destroy
+  def destroy # updating status to 'removed' 
     carted_product = CartedProduct.find(params[:id])
-    carted_product.destroy
+    carted_product.update(
+      status: "removed"
+    )
     render json: {message: "Successfully removed from cart"}
   end
 end

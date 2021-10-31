@@ -118,5 +118,5 @@ Authorization: Bearer {{jwt}}
 
 ###
 # carted_products destroy
-DELETE http://localhost:3000/carted_products/14
+DELETE http://localhost:3000/carted_products/15
 Authorization: Bearer {{jwt}}
