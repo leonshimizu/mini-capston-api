@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
       tax: tax,
       total: total 
     )
-    order.save 
+    order.save
     render json: order
   end
 

@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc3NzI1MTN9._-yE_7TjK3vgpZSIImwB1yZ-vqyfWbzKrFj1TyNXRA4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc3NzI1NDN9.O4ltczPb7fg5puaQssRZ2ZTszy4RoVHmVoOSwrNQHKc
 
 # To use them use {{jwt}}
 # admin
@@ -113,8 +113,8 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "product_id": 5,
-  "quantity": 1
+  "product_id": 76,
+  "quantity": 3
 }
 
 ###
