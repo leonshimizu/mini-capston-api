@@ -79,12 +79,12 @@ content-type: application/json
 # create order
 POST http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
-content-type: application/json 
+# content-type: application/json 
 
-{
-  "product_id": 9,
-  "quantity": 2
-}
+# {
+#   "product_id": 9,
+#   "quantity": 2
+# }
 
 ###
 # show order
