@@ -4,9 +4,14 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: "carted"
+      status: "test"
     )
     carted_product.save
     render json: carted_product.as_json
+  end
+
+  def index
+    carted_products = CartedProduct.where(status: "carted")
+    render json: carted_products.as_json
   end
 end

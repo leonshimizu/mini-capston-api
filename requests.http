@@ -113,6 +113,11 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "product_id": 3,
+  "product_id": 5,
   "quantity": 1
 }
+
+###
+# carted_products index
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
