@@ -106,3 +106,15 @@ content-type: application/json
 # order index
 GET http://localhost:3000/orders 
 Authorization: Bearer {{jwt}}
+
+###
+# carted_products create
+POST http://localhost:3000/carted_products
+content-type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 2,
+  "status": "carted"
+}
