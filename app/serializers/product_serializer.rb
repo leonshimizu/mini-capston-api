@@ -3,4 +3,5 @@ class ProductSerializer < ActiveModel::Serializer
   belongs_to :supplier
   has_many :images
   has_many :orders
+  has_many :carted_products
 end

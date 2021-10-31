@@ -1,14 +1,14 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc3NzI1MTN9._-yE_7TjK3vgpZSIImwB1yZ-vqyfWbzKrFj1TyNXRA4
 
 # To use them use {{jwt}}
 # admin
-# test = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNTIwMTZ9.LtXjSBxLMEaW9IwuhmiCi6Vhqj79rq6UMXBngP0dkhA
+# test = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc3NzI1MTN9._-yE_7TjK3vgpZSIImwB1yZ-vqyfWbzKrFj1TyNXRA4
 
 #user
-# test1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNTIwNDV9.HV08QR9XrCVQ4HbfdRdmruIwE_8c-tFoZLPI2uZNZys
+# test1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc3NzI1NDN9.O4ltczPb7fg5puaQssRZ2ZTszy4RoVHmVoOSwrNQHKc
 
 #user
-# test2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzUzNTIwODd9.-JYoIkM-fOcbR-ILRelXchRSKgMfaIv28uA1bup3oV4
+# test2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc3NzI1NTF9.xbYBM-OWfWmFYuZGIot46mqhKloSE3PMmtUzhqeXzxA
 
 ###
 #products index
@@ -68,11 +68,10 @@ content-type: application/json
 ###
 # user login
 POST http://localhost:3000/sessions
-Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "email": "test@gmail.com",
+  "email": "test2@gmail.com",
   "password": "password"
 }
 
@@ -103,17 +102,17 @@ content-type: application/json
 }
 
 ###
-# order index
+# order index - not working - column orders.user_id does not exist
 GET http://localhost:3000/orders 
 Authorization: Bearer {{jwt}}
 
 ###
 # carted_products create
 POST http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "user_id": 1,
   "product_id": 1,
   "quantity": 2,
   "status": "carted"
