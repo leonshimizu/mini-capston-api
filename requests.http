@@ -113,7 +113,6 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "product_id": 1,
-  "quantity": 2,
-  "status": "carted"
+  "product_id": 3,
+  "quantity": 1
 }
