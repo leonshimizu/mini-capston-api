@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user # same code as if current_user
 
   def create
-    carted_products = CartedProduct.where(user_id: current_user.id)
+    carted_products = current_user.carted_products.where(status: "carted")
 
     calculated_subtotal = 0
     calculated_tax = 0
