@@ -1,8 +1,8 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc3NzI1NDN9.O4ltczPb7fg5puaQssRZ2ZTszy4RoVHmVoOSwrNQHKc
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg1ODQ3OTR9.TND-VUZIK8_f3R3CJTK7v_7d86NbRJKFwmEev163T6A
 
 # To use them use {{jwt}}
 # admin
-# test = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc3NzI1MTN9._-yE_7TjK3vgpZSIImwB1yZ-vqyfWbzKrFj1TyNXRA4
+# test = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg1ODQ3OTR9.TND-VUZIK8_f3R3CJTK7v_7d86NbRJKFwmEev163T6A
 
 #user
 # test1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc3NzI1NDN9.O4ltczPb7fg5puaQssRZ2ZTszy4RoVHmVoOSwrNQHKc
@@ -27,10 +27,10 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "name": "TABle",
-  "price": 100,
-  "description": "Holds things",
-  "supplier_id": 5
+  "name": "something",
+  "price": 1,
+  "description": "Testinggggg",
+  "supplier_id": 1
 }
 
 ###
@@ -71,7 +71,7 @@ POST http://localhost:3000/sessions
 content-type: application/json
 
 {
-  "email": "test2@gmail.com",
+  "email": "test@gmail.com",
   "password": "password"
 }
 
