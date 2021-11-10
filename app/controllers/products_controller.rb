@@ -2,14 +2,17 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
-    if params[:category]
-      category = Category.find_by(name: params[:category])
-      products = category.products
-      render json: products
-    else
-      products = Product.all
-      render json: products
-    end
+    # if params[:category]
+    #   category = Category.find_by(name: params[:category])
+    #   products = category.products
+    #   render json: products
+    # else
+    #   products = Product.all
+    #   render json: products
+    # end
+    products = Product.all
+    render json: products
+    # render json: {message: "hello"}
   end
 
   def show
