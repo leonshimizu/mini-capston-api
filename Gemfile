@@ -45,3 +45,5 @@ gem 'seed_dump'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
+
+gem 'rspec-rails', '~> 5.0.0'
